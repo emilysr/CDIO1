@@ -7,7 +7,7 @@ public class UserInterface {
 		Dice ui = new Dice(0);
 		java.util.Scanner input = new java.util.Scanner(System.in);
 	
-	System.out.println("Who stats player 1 or 2? (1/2)");
+	System.out.println("Who starts player 1 or 2? (1/2)");
 	int player = input.nextInt();
 	int p1Score = 0; int p2Score = 0; 
 	
