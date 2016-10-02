@@ -1,65 +1,55 @@
 package cdio1;
 
 public class Ui {
-
-	static Dice dice = new Dice();
-	static Player player1 = new Player();
-	static Player player2 = new Player();
 	
 	public static void main(String[] args) 
-	
-	{
 
+	{
+	
+		java.util.Scanner input;
+		Dice dice = new Dice();
+		Player player1 = new Player();
+		Player player2 = new Player();
+		input = new java.util.Scanner(System.in);
 		
 	while(player1.getScore()< 40 && player2.getScore()<40)
 	{
 		int hit = 0;
 		int sum = 0;
-		System.out.println("\n\nPlayer 1's turn:");
+		System.out.print("\n\nPlayer 1's turn:");
+		input.nextLine();
 		for (int i=0; i<2; i++)
 			{
 				dice.roll();
 			System.out.print(dice.getFaceValue() + "   ");
-					player1.addScore(dice.getFaceValue()); // Tilføj slag til Player 1 score
+					player1.addScore(dice.getFaceValue());
 					if(i==0){
 					hit = dice.getFaceValue();
 					}
 					else{
 					sum = dice.getFaceValue() + hit;
 					System.out.print("\nSum of throws " + sum);
-					if(compareHits(hit) == true)
+					if(Dice.Equals(hit) == true)
 					{
 						System.out.println("\nYou get an extra turn!");
 						i = i - 2 ;
 					}
+					
 					}
 					
 				}
-		if(player1.getScore()>40)
-		{
-			System.out.println("\nPlayer 1's score: 40");
-		}
-		else
-		{
-		System.out.println("\nPlayer 1's score: " + player1.getScore());
-		}
 		
-		if(player2.getScore()>40)
-		{
-			System.out.println("Player 2's score: 40");
-		}
-		else
-		{
-		System.out.println("Player 2's score: " + player2.getScore());
-		}
+		Player.printScore(player1,player2);
+		
 		// Change of turn
 		
-		System.out.println("\n\nPlayer 2's turn:");
+		System.out.print("\n\nPlayer 2's turn:");
+		input.nextLine();
 		for (int i=0; i<2; i++)
 		{
 			dice.roll();
 		System.out.print(dice.getFaceValue() + "   ");
-				player2.addScore(dice.getFaceValue()); // Tilføj slag til Player 2 score
+				player2.addScore(dice.getFaceValue()); // ADd hit to Player 2 score
 				if(i==0){
 				hit = dice.getFaceValue();
 				}
@@ -67,7 +57,7 @@ public class Ui {
 				{
 				sum = dice.getFaceValue() + hit;
 				System.out.print("\nSum of throws " + sum);
-				if(compareHits(hit) == true)
+				if(Dice.Equals(hit) == true)
 				{
 					System.out.println("\nYou get an extra turn!");
 					i = i - 2 ;
@@ -75,36 +65,15 @@ public class Ui {
 				}
 
 			}
-		if(player1.getScore()>40)
-		{
-			System.out.println("\nPlayer 1's score: 40");
-		}
-		else
-		{
-		System.out.println("\nPlayer 1's score: " + player1.getScore());
-		}
 		
-		if(player2.getScore()>40)
-		{
-			System.out.println("Player 2's score: 40");
-		}
-		else
-		{
-		System.out.println("Player 2's score: " + player2.getScore());
-		}
+		Player.printScore(player1,player2);
+		
 	}
 		
 
-
+	input.close();
 	}
 	
-	public static boolean compareHits(int hit)
-	{
-		boolean result = false;
-		if(dice.getFaceValue() == hit)
-		{
-			result = true;
-		}
-		return result;
-	}	
+
+	
 }
