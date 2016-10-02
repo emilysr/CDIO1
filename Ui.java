@@ -28,7 +28,7 @@ public class Ui {
 					}
 					else{
 					sum = dice.getFaceValue() + hit;
-					System.out.print("\nSum of throws " + sum);
+					System.out.print("\nSum of throws: " + sum);
 					if(Dice.Equals(hit) == true)
 					{
 						System.out.println("\nYou get an extra turn!");
@@ -56,7 +56,7 @@ public class Ui {
 				else
 				{
 				sum = dice.getFaceValue() + hit;
-				System.out.print("\nSum of throws " + sum);
+				System.out.print("\nSum of throws: " + sum);
 				if(Dice.Equals(hit) == true)
 				{
 					System.out.println("\nYou get an extra turn!");
