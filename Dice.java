@@ -62,7 +62,7 @@ public class Dice {
 	
 	//udskriver spiller 2 score
 	public int getScore2 () {
-		System.out.println("\nPlayer 1 score: " + score2);
+		System.out.println("\nPlayer 2 score: " + score2);
 		return score2;
 	}
 	
