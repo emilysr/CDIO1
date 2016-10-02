@@ -9,12 +9,12 @@ public class Player
 //Konstruktør
 public Player()
 {
-	this.score = 0;
+	score = 0;
 }
 // Henter scoren
 public int getScore()
 {
-	int result = score;
+	int result = this.score;
 	return result;
 }
 // Tilføjer en værdi til spillerens score
@@ -25,18 +25,20 @@ public void addScore(int score)
 // Nulstil scoren
 public void resetScore()
 {
-	this.score = 0;
+	score = 0;
 }
 
-// Win conditions
-public void primeWin(int score)
+public static void printScore(Player player1,Player player2)
 {
-	boolean winCon = false;
-	if(score >= 40)
-
-	{
-		winCon = true;
-	}
+	if(player1.getScore()>40)
+		System.out.println("\nPlayer 1's score: 40");
+	else
+		System.out.println("\nPlayer 1's score: " + player1.getScore());
+	
+	if(player2.getScore()>40)
+		System.out.println("Player 2's score: 40");
+	else
+		System.out.println("Player 2's score: " + player2.getScore());
 }
 
 
