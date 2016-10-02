@@ -26,7 +26,6 @@ public class Ui {
 					}
 					else{
 					sum = dice.getFaceValue() + hit;
-					//System.out.print("\nEr de ens: " + compareHit(hit));
 					System.out.print("\nSum of throws " + sum);
 					if(compareHits(hit) == true)
 					{
