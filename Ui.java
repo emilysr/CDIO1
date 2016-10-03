@@ -21,7 +21,7 @@ public class Ui {
 			GUI.displayChanceCard("Sum of dice: " + sum + ".   Player 1's score:  " + player1.scoreString() + "\n" + "     Player 2's Score:  " + player2.scoreString());
 		
 		// Create buttons and show turn (Break game)
-			GUI.getUserLeftButtonPressed("Player 1's turn", "Roll the dice", " Roll the dice");
+			GUI.getUserLeftButtonPressed("Player 1's turn", "Hard roll", " Soft roll");
 		for (int i=0; i<2; i++)
 		{
 			dice.roll();
@@ -43,7 +43,7 @@ public class Ui {
 					{
 					i = i - 2 ;
 					// Break game and announce extra turn
-						GUI.getUserLeftButtonPressed("Player 1 gets an extra turn!", "Roll the dice"," Roll the dice");
+						GUI.getUserLeftButtonPressed("Player 1 gets an extra turn!", "Hard roll", " Soft roll");
 					}
 					
 				}
@@ -56,7 +56,7 @@ public class Ui {
 		
 		// Change of turn to Player 2 *****************************************************
 		
-		GUI.getUserLeftButtonPressed("Player 2's turn", "Roll the dice"," Roll the dice ");
+		GUI.getUserLeftButtonPressed("Player 2's turn", "Hard roll", " Soft roll");
 		for (int i=0; i<2; i++)
 		{
 		dice.roll();
@@ -77,7 +77,7 @@ public class Ui {
 					{
 					i = i - 2 ;
 					// Break game and announce extra turn
-						GUI.getUserLeftButtonPressed("Player 2 gets an extra turn!", "Roll the dice", " Roll the dice ");
+						GUI.getUserLeftButtonPressed("Player 2 gets an extra turn!", "Hard roll", " Soft roll";
 					}
 			}
 
