@@ -18,7 +18,7 @@ public class Ui {
 		// Player 1's turn *****************************************************
 		
 		// Update score in middle of board
-			GUI.displayChanceCard("Player 1's score:  " + player1.scoreString() + "\nPlayer 2's Score:  " + player2.scoreString());
+			GUI.displayChanceCard("Sum of dice: " + sum + ".   Player 1's score:  " + player1.scoreString() + "\n" + "     Player 2's Score:  " + player2.scoreString());
 		
 		// Create buttons and show turn (Break game)
 			GUI.getUserLeftButtonPressed("Player 1's turn", "Roll the dice", " Roll the dice");
@@ -51,7 +51,7 @@ public class Ui {
 		}
 		
 		// Update score in middle of board
-			GUI.displayChanceCard("Player 1's score:  " + player1.scoreString() + "\n" + "Player 2's Score:  " + player2.scoreString());
+			GUI.displayChanceCard("Sum of dice: " + sum + ".   Player 1's score:  " + player1.scoreString() + "\n" + "     Player 2's Score:  " + player2.scoreString());
 		
 		
 		// Change of turn to Player 2 *****************************************************
@@ -84,8 +84,8 @@ public class Ui {
 		}
 		
 		// Update score in middle of board
-			GUI.displayChanceCard("Player 1's score:  " + player1.scoreString() + "\nPlayer 2's Score:  " + player2.scoreString());
-	}
+			GUI.displayChanceCard("Sum of dice: " + sum + ".   Player 1's score:  " + player1.scoreString() + "\n" + "     Player 2's Score:  " + player2.scoreString());
+	}	
 	}
 	
 
