@@ -18,7 +18,7 @@ public class Ui {
 		// Player 1's turn *****************************************************
 		
 		// Update score in middle of board
-			GUI.displayChanceCard("Sum of dice: " + sum + ".   Player 1's score:  " + player1.scoreString() + "\n" + "     Player 2's Score:  " + player2.scoreString());
+			GUI.displayChanceCard("Player 1's score:  " + player1.scoreString() + "\n" + "     Player 2's Score:  " + player2.scoreString());
 		
 		// Create buttons and show turn (Break game)
 			GUI.getUserLeftButtonPressed("Player 1's turn", "Hard roll", " Soft roll");
