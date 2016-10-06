@@ -28,4 +28,10 @@ public void resetScore()
 	score = 0;
 }
 
+//Printer den nuværende score som én string
+public String scoreString()
+{
+int result = this.score;
+return "" + result + "";
+}
 }
